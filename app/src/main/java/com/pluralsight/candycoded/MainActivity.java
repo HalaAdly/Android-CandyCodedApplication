@@ -63,7 +63,6 @@ public class MainActivity extends AppCompatActivity {
 					public void onSuccess(int statusCode, Header[] headers, String response) {
 						Log.d("AsyncHttpClient", "response = " + response);
 						Gson gson = new GsonBuilder().create();
-						;
 						candies = gson.fromJson(response, Candy[].class);
 
 						addCandiesToDatabase(candies);
@@ -81,9 +80,6 @@ public class MainActivity extends AppCompatActivity {
 		inflater.inflate(R.menu.main, menu);
 		return true;
 	}
-	// ***
-	// TODO - Task 1 - Show Store Information Activity
-	// ***
 
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
